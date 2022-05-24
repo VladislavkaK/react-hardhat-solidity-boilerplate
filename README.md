@@ -1,46 +1,54 @@
-# Getting Started with Create React App
+# Boilerplate
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+```
+  React
+  Hardhat
+  Solidity
+  Styled-components
+  Alchemy
+  Metamask
+  Ethers.js
+  Web3.js
+  Rinkeby
+```
 
-## Available Scripts
+### 1) Create Alchemy account and Create App(Name: any-name; Description: -; env: Staging; Network: Rinkeby)
 
-In the project directory, you can run:
+### 2) CREATE AN ETHEREUM ACCOUNT ON METAMASK and INCLUDE Rinkeby Test Network and Send Test Money From for example(https://faucet.rinkeby.io/)
 
-### `yarn start`
+### 3) Create .env file and add:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Export Private Key -> https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```
+  API_URL = "https://eth-rinkeby.alchemyapi.io/v2/your-api-alchemy-key"
+  PRIVATE_KEY = "your-private-metamask-key"
+```
 
-### `yarn test`
+### 4) Compile our contract
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+  npx hardhat compile
+```
 
-### `yarn build`
+### 5) Write deploy script or you can use script by default
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 6) Deploy our contract
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+  npx hardhat run scripts/deploy.js --network rinkeby
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### and you will get:
 
-### `yarn eject`
+```
+  Contract deployed to address: 0x380def90af6F4Ea193173C2be498438740dC1Bbb
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### and you find contract on 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+  https://rinkeby.etherscan.io/
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+# THE END!
